@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QTKVPD Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+            padding: 10px;
+            background-color: #333;
+            border: none;
+        }
+        nav {
+            background-color: #ff9b85;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #ffccbf;
+            color: #333;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            font-weight: bold;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .home-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .home-section img, .home-section video {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .home-section h2 {
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+        .home-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            nav a:not(:first-child), .dropdown {
+                display: none;
+            }
+            .menu-icon {
+                display: block;
+            }
+            nav.responsive {
+                position: relative;
+            }
+            nav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            nav.responsive .dropdown {
+                float: none;
+            }
+            nav.responsive .dropdown-content {
+                position: relative;
+            }
+            nav.responsive .dropdown .dropbtn {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to QTKVPD Website</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">About Us 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#our-team">Our Team</a>
+                <a href="#our-mission">Our Mission</a>
+                <a href="#our-vision">Our Vision</a>
+            </div>
+        </div> 
+        <a href="#contact">Contact</a>
+        <button class="menu-icon" onclick="toggleMenu()">&#9776;</button>
+    </nav>
+    <section id="home">
+        <div class="home-section">
+            <h2>About Us</h2>
+            <p>We are QTKVPD, a dynamic team passionate about innovation and excellence. Our goal is to inspire and empower others through creativity and collaboration.</p>
+        </div>
+        <div class="home-section">
+            <h2>Our Video</h2>
+            <video controls width="800">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="home-section">
+            <h2>Our Gallery</h2>
+            <img src="https://via.placeholder.com/800x400" alt="Team Image 1">
+            <img src="https://via.placeholder.com/800x400" alt="Team Image 2">
+        </div>
+    </section>
+    <section id="our-team">
+        <h2>Our Team</h2>
+        <p>Meet the talented individuals behind our success. Together, we strive to achieve greatness and make a difference.</p>
+    </section>
+    <section id="our-mission">
+        <h2>Our Mission</h2>
+        <p>Our mission is to provide innovative solutions that meet the needs of our clients and exceed their expectations.</p>
+    </section>
+    <section id="our-vision">
+        <h2>Our Vision</h2>
+        <p>Our vision is to become a global leader in delivering high-quality services and solutions.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Reach out to us for any inquiries or collaborations. We'd love to hear from you!</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 QTKVPD Website. Hak Cipta Terpelihara.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('responsive');
+        }
+    </script>
+</body>
+</html>
